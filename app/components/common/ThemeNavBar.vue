@@ -3,33 +3,33 @@
 		<h1 class="font-bold">Choose Theme:</h1>
 		<div class="flex gap-2.5">
 			<NuxtLink to="/">
-				<CommonIconButton>
+				<IconButton>
 					<template #label> Default </template>
-				</CommonIconButton>
+				</IconButton>
 			</NuxtLink>
 			<NuxtLink to="/">
-				<CommonIconButton>
+				<IconButton :disabled="true">
 					<template #icon>
 						<Terminal></Terminal>
 					</template>
 					<template #label> Nerd </template>
-				</CommonIconButton>
+				</IconButton>
 			</NuxtLink>
 			<NuxtLink to="/">
-				<CommonIconButton>
+				<IconButton>
 					<template #icon>
 						<Grip></Grip>
 					</template>
 					<template #label> Pixel Perfect </template>
-				</CommonIconButton>
+				</IconButton>
 			</NuxtLink>
 			<NuxtLink to="/">
-				<CommonIconButton>
+				<IconButton>
 					<template #icon>
 						<HandMetal> </HandMetal>
 					</template>
 					<template #label> Back to the 90's </template>
-				</CommonIconButton>
+				</IconButton>
 			</NuxtLink>
 		</div>
 	</nav>

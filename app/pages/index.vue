@@ -1,55 +1,54 @@
 <template>
-	<fieldset
-		id="testing"
-		ref="elem"
-		class="p-5 border-2 border-red-200 hover:border-red-500 border-dashed rounded-2 w-64 cursor-grab active:cursor-grabbing select-none draggable"
-		:class="display"
-		:style="elemStyle"
-		@mousedown="onMouseDown($event)"
-	>
-		<legend align="center" class="opacity-75 text-gray-600">
-			( <em>{{ elemX }}</em
-			>, <em>{{ elemY }}</em> )
-		</legend>
-		<div>this is a testing draggable div!</div>
-	</fieldset>
+	<div class="flex gap-5">
+		<DraggableContainer>
+			<template #title>
+				<div>About me</div>
+			</template>
+			<template #content>
+				<p>
+					Computational linguistics graduate turned fullsack .NET
+					Developer working at the Kings County District Attorney's
+					Office.
+				</p>
+				<p>
+					Here I develop RESTful applications for legal staff to
+					perform CRUD operations on complex legal data
+				</p>
+			</template>
+		</DraggableContainer>
+		<DraggableContainer>
+			<template #title>
+				<div>My Research</div>
+			</template>
+			<template #content>
+				<p>
+					My graduate research focused on using advanced stylometric
+					feature extraction to embed language data into
+					high-dimensional vectors.
+				</p>
+				<p>
+					These vectors were then used for authorship attribution, the
+					task of automatically identifying the author of a document.
+				</p>
+			</template>
+		</DraggableContainer>
+		<DraggableContainer>
+			<template #title>
+				<div>Skills</div>
+			</template>
+			<template #content>
+				<p>
+					Frontend: TypeScript, JavaScript, Angular, Bootstrap CSS,
+					VueJS, NuxtJS
+				</p>
+				<p>
+					Backend: SQL Server, T-SQL, ASP.NET Core, .NET, C#, Python
+				</p>
+			</template>
+		</DraggableContainer>
+	</div>
 </template>
 
-<script setup lang="ts">
-	let display = ref('block');
-	let elemStyle = ref('');
-	let elemX = ref(0);
-	let elemY = ref(0);
+<script setup lang="ts"></script>
 
-	const elem = useTemplateRef('elem');
-
-	onMounted(() => {
-		const _x = parseInt(elem.value!.style.left);
-		const _y = parseInt(elem.value!.style.top);
-
-		const { style } = useDraggable(elem, {
-			initialValue: { x: _x, y: _y },
-			onMove(position, _) {
-				elemX.value = position.x;
-				elemY.value = position.y;
-			},
-		});
-
-		elemStyle = style;
-	});
-
-	const onMouseDown = (event: MouseEvent): void => {
-		display.value = 'fixed';
-	};
-</script>
-
-<style scoped>
-	.draggable {
-		z-index: 1000;
-		box-shadow:
-			rgba(0, 0, 0, 0.15) 0px 15px 25px,
-			rgba(0, 0, 0, 0.05) 0px 5px 10px;
-
-		transition: border-color 0.3s ease-in-out;
-	}
-</style>
+<style scoped></style>

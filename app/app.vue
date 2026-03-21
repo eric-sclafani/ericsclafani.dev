@@ -1,5 +1,5 @@
 <template>
-	<CommonThemeNavBar></CommonThemeNavBar>
+	<ThemeNavBar></ThemeNavBar>
 	<NuxtLayout>
 		<NuxtPage></NuxtPage>
 	</NuxtLayout>
