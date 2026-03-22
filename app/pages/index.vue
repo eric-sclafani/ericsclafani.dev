@@ -32,7 +32,7 @@
 				</p>
 			</template>
 		</DraggableContainer>
-		<DraggableContainer>
+		<!-- <DraggableContainer>
 			<template #title>
 				<div>Skills</div>
 			</template>
@@ -46,6 +46,17 @@
 				</p>
 			</template>
 		</DraggableContainer>
+		<DraggableContainer>
+			<template #title>
+				<div>Hobbies</div>
+			</template>
+			<template #content>
+				<p>
+					Coding, Reading, Birdwatching, Long walks, Videogames,
+					Making pixel art
+				</p>
+			</template>
+		</DraggableContainer> -->
 	</div>
 </template>
 

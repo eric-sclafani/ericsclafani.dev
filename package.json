@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@neodrag/vue": "^3.0.0-next.9",
     "@tailwindcss/vite": "^4.2.1",
     "lucide-vue-next": "^0.577.0",
     "nuxt": "^4.4.2",
