@@ -1,0 +1,54 @@
+{
+	"about": [
+		"Computational linguistics graduate turned fullsack .NET Developer working at the Kings County District Attorney's Office.",
+		"Here I develop RESTful applications for legal staff to perform CRUD operations on complex legal data"
+	],
+	"research": [
+		"My graduate research focused on using advanced stylometric feature extraction to embed language data into high-dimensional vectors.",
+		"These vectors were then used for authorship attribution, the task of automatically identifying the author of a document."
+	],
+	"skills": [
+		{
+			"label": "Frontend",
+			"items": [
+				"TypeScript",
+				"JavaScript",
+				"Angular",
+				"VueJS",
+				"HTML",
+				"CSS",
+				"Bootstrap CSS",
+				"Tailwind"
+			]
+		},
+		{
+			"label": "Backend",
+			"items": [
+				"SQL Server",
+				"T-SQL",
+				"ASP.NET Core",
+				".NET",
+				"C#",
+				"Python"
+			]
+		}
+	],
+	"hobbies": {
+		"items": [
+			"Coding",
+			"Reading",
+			"Birdwatching",
+			"Long walks",
+			"Videogames",
+			"Draeing pixel art"
+		]
+	},
+	"projects": [
+		{
+			"title": "Gram2Vec",
+			"description": "",
+			"link": "https://github.com/eric-sclafani/gram2vec",
+			"skills": ["Python", "Pandas", "NumPy", ""]
+		}
+	]
+}

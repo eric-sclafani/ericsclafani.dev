@@ -1,72 +1,44 @@
 <template>
-	<!-- <fieldset
-		ref="elem"
-		class="p-5 border-2 border-red-200 hover:border-red-500 border-dashed rounded-2 w-64 cursor-grab active:cursor-grabbing select-none draggable"
-		:class="classes"
-		:style="elemStyle"
-		@mousedown="onMouseDown($event)"
-		@mouseup="onMouseUp($event)"
-	>
-		<legend align="center" class="opacity-75 text-gray-600">
-			( <em>{{ elemX }}</em
-			>, <em>{{ elemY }}</em> )
-		</legend>
-		<div class="flex flex-col gap-5">
-			<div class="text-center"><slot name="title"></slot></div>
-			<slot name="content"></slot>
-		</div>
-	</fieldset> -->
 	<fieldset
-		v-draggable
-		class="p-5 border-2 border-red-200 hover:border-red-500 border-dashed rounded-2 w-64 cursor-grab active:cursor-grabbing select-none draggable"
+		v-draggable="plugins"
+		class="bg-gray-100 p-4 border-3 border-red-200 hover:border-red-500 active:border-3 border-dashed rounded-2 w-64 cursor-grab active:cursor-grabbing select-none draggable"
 	>
-		<legend align="center" class="opacity-75 text-gray-600">
-			<!-- ( <em>{{ elemX }}</em
-			>, <em>{{ elemY }}</em> ) -->
+		<legend align="center" class="opacity-75 text-gray-600 text-2xl">
+			<div class="flex items-center font-bold text-center">
+				<GripVertical></GripVertical>
+				<slot name="title"></slot>
+			</div>
 		</legend>
-		<div class="flex flex-col gap-5">
-			<div class="text-center"><slot name="title"></slot></div>
+
+		<div class="flex flex-col">
 			<slot name="content"></slot>
+			<div class="justify-self-end text-center">
+				( <em>{{ elemX }}</em
+				>, <em>{{ elemY }}</em> )
+			</div>
 		</div>
 	</fieldset>
 </template>
 
 <script setup lang="ts">
-	import { vDraggable } from '@neodrag/vue';
+	import { events, vDraggable } from '@neodrag/vue';
+	import { GripVertical } from 'lucide-vue-next';
 
-	// let elemStyle = ref('');
-	// let classes = reactive({
-	// 	block: true,
-	// 	fixed: false,
-	// });
-	// let elemX = ref(0);
-	// let elemY = ref(0);
+	let elemX = ref(0);
+	let elemY = ref(0);
 
-	// const elem = useTemplateRef('elem');
+	const plugins = [
+		events({
+			// onDragStart: (data) => console.log('Started:', data.offset),
+			onDrag: (data) => onElemDrag(data.offset.x, data.offset.y),
+			// onDragEnd: (data) => console.log('Ended:', data.offset),
+		}),
+	];
 
-	// onMounted(() => {
-	// 	const rect = elem.value?.getBoundingClientRect();
-
-	// 	elemX.value = rect?.left ?? 0;
-	// 	elemY.value = rect?.top ?? 0;
-
-	// 	const { style } = useDraggable(elem, {
-	// 		initialValue: { x: elemX.value, y: elemY.value },
-	// 		onMove(position) {
-	// 			elemX.value = position.x;
-	// 			elemY.value = position.y;
-	// 		},
-	// 	});
-
-	// 	elemStyle = style;
-	// });
-
-	// const onMouseDown = (event: MouseEvent): void => {
-	// 	classes.fixed = true;
-	// 	classes.block = false;
-	// };
-
-	// const onMouseUp = (event: MouseEvent): void => {};
+	const onElemDrag = (x: number, y: number) => {
+		elemX.value = x;
+		elemY.value = y;
+	};
 </script>
 
 <style scoped>

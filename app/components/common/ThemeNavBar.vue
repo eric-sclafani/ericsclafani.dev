@@ -4,6 +4,7 @@
 		<div class="flex gap-2.5">
 			<NuxtLink to="/">
 				<IconButton>
+					<template #icon><Home></Home></template>
 					<template #label> Default </template>
 				</IconButton>
 			</NuxtLink>
@@ -36,5 +37,5 @@
 </template>
 
 <script setup lang="ts">
-	import { Grip, Terminal, HandMetal } from 'lucide-vue-next';
+	import { Grip, Terminal, HandMetal, Home } from 'lucide-vue-next';
 </script>
