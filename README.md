@@ -10,8 +10,9 @@ New portfolio. More coming soon.
 
 ## Default
 
-- For each draggable element, keep coords in session storage to retain their position after refresh
-    - Or, on each refresh, they have random starting positions?
+- For each draggable element, keep coords in web storage to retain their position after refresh
+
+- Chosen theme also stay in web storage
 
 - Play around with vueuse composables (onLongPress, etc...)
 

@@ -15,7 +15,7 @@ export interface Portfolio {
 	about: string[];
 	research: string[];
 	skills: ListItem[];
-	hobbies: ListItem;
+	hobbies: string[];
 	projects: Project[];
 }
 

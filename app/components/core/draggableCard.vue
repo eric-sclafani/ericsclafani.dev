@@ -1,7 +1,7 @@
 <template>
 	<fieldset
 		v-draggable="plugins"
-		class="bg-gray-100 p-4 border-3 border-red-200 hover:border-red-500 active:border-3 border-dashed rounded-2 w-64 cursor-grab active:cursor-grabbing select-none draggable"
+		class="bg-gray-100 p-4 border-3 border-red-200 hover:border-red-500 active:border-3 border-dashed rounded-2 cursor-grab active:cursor-grabbing select-none draggable"
 	>
 		<legend align="center" class="opacity-75 text-gray-600 text-2xl">
 			<div class="flex items-center font-bold text-center">
@@ -36,8 +36,8 @@
 	];
 
 	const onElemDrag = (x: number, y: number) => {
-		elemX.value = x;
-		elemY.value = y;
+		elemX.value = Math.round(x);
+		elemY.value = Math.round(y);
 	};
 </script>
 

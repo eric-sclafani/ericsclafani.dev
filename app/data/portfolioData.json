@@ -1,7 +1,7 @@
 {
 	"about": [
-		"Computational linguistics graduate turned fullsack .NET Developer working at the Kings County District Attorney's Office.",
-		"Here I develop RESTful applications for legal staff to perform CRUD operations on complex legal data"
+		"Computational linguistics graduate turned fullsack .NET Developer working at the Kings County District Attorney's Office (KCDA).",
+		"Here I develop RESTful applications for legal staff to perform CRUD operations on complex legal data."
 	],
 	"research": [
 		"My graduate research focused on using advanced stylometric feature extraction to embed language data into high-dimensional vectors.",
@@ -10,43 +10,33 @@
 	"skills": [
 		{
 			"label": "Frontend",
-			"items": [
-				"TypeScript",
-				"JavaScript",
-				"Angular",
-				"VueJS",
-				"HTML",
-				"CSS",
-				"Bootstrap CSS",
-				"Tailwind"
-			]
+			"items": ["TypeScript", "JavaScript", "Angular", "VueJS", "HTML"]
 		},
 		{
-			"label": "Backend",
-			"items": [
-				"SQL Server",
-				"T-SQL",
-				"ASP.NET Core",
-				".NET",
-				"C#",
-				"Python"
-			]
+			"label": "UI & Styling",
+			"items": ["CSS", "Bootstrap CSS", "Tailwind", "Angular Material"]
+		},
+		{
+			"label": "Serverside",
+			"items": ["ASP.NET Core", ".NET", "C#", "Python"]
+		},
+		{
+			"label": "Database",
+			"items": ["SQL Server", "T-SQL", "SQLite"]
 		}
 	],
-	"hobbies": {
-		"items": [
-			"Coding",
-			"Reading",
-			"Birdwatching",
-			"Long walks",
-			"Videogames",
-			"Draeing pixel art"
-		]
-	},
+	"hobbies": [
+		"Coding",
+		"Reading",
+		"Birdwatching",
+		"Long walks",
+		"Videogames",
+		"Drawing pixel art"
+	],
 	"projects": [
 		{
 			"title": "Gram2Vec",
-			"description": "",
+			"description": "Document embedding algorithm that projects documents into a high dimensional vector space based of grammatical writing style",
 			"link": "https://github.com/eric-sclafani/gram2vec",
 			"skills": ["Python", "Pandas", "NumPy", ""]
 		}
