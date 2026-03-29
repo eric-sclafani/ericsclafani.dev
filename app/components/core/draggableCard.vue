@@ -5,7 +5,6 @@
 	>
 		<legend align="center" class="opacity-75 text-gray-600 text-2xl">
 			<div class="flex items-center font-bold text-center">
-				<GripVertical></GripVertical>
 				<slot name="title"></slot>
 			</div>
 		</legend>
@@ -22,7 +21,6 @@
 
 <script setup lang="ts">
 	import { events, vDraggable } from '@neodrag/vue';
-	import { GripVertical } from 'lucide-vue-next';
 
 	let elemX = ref(0);
 	let elemY = ref(0);

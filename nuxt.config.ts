@@ -18,7 +18,6 @@ export default defineNuxtConfig({
 		},
 	},
 	css: ['./app/assets/css/main.css'],
-	modules: ['@vueuse/nuxt'],
 	features: {
 		devLogs: false,
 	},

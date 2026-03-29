@@ -16,8 +16,10 @@
 
 <script setup lang="ts">
 	import { usePortfolio } from '~/composables/common/usePortfolio';
+	import { useThemeHandler } from '~/composables/common/useThemeHandler';
 
 	const port = usePortfolio();
+	const { currentTheme } = useThemeHandler();
 </script>
 
 <style scoped>
