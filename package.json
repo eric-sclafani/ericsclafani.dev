@@ -1,25 +1,26 @@
 {
-  "name": "ericsclafani-dev",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "@neodrag/vue": "^3.0.0-next.9",
-    "@tailwindcss/vite": "^4.2.1",
-    "lucide-vue-next": "^0.577.0",
-    "nuxt": "^4.4.2",
-    "tailwindcss": "^4.2.1",
-    "vue": "^3.5.30",
-    "vue-router": "^5.0.3"
-  },
-  "devDependencies": {
-    "@vueuse/core": "^14.2.1",
-    "@vueuse/nuxt": "^14.2.1"
-  }
+	"name": "ericsclafani-dev",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"dependencies": {
+		"@neodrag/vue": "^3.0.0-next.9",
+		"@nuxtjs/color-mode": "^4.0.0",
+		"@tailwindcss/vite": "^4.2.1",
+		"lucide-vue-next": "^0.577.0",
+		"nuxt": "^4.4.2",
+		"tailwindcss": "^4.2.1",
+		"vue": "^3.5.30",
+		"vue-router": "^5.0.3"
+	},
+	"devDependencies": {
+		"@vueuse/core": "^14.2.1",
+		"@vueuse/nuxt": "^14.2.1"
+	}
 }

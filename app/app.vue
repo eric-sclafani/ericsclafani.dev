@@ -1,6 +1,3 @@
 <template>
-	<CoreThemeNavBar></CoreThemeNavBar>
-	<NuxtLayout>
-		<NuxtPage></NuxtPage>
-	</NuxtLayout>
+	<NuxtPage></NuxtPage>
 </template>

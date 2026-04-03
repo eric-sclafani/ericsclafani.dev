@@ -3,7 +3,7 @@
 		<h1 class="mt-2 font-bold">Choose Theme:</h1>
 		<div class="flex gap-2.5">
 			<CoreNavButton
-				:is-current-theme="currentTheme !== 'default'"
+				:is-current-theme="currentTheme == 'default'"
 				@click="setTheme('default')"
 			>
 				<template #icon><Home></Home></template>
@@ -11,7 +11,7 @@
 			</CoreNavButton>
 
 			<CoreNavButton
-				:is-current-theme="currentTheme !== 'nerd'"
+				:is-current-theme="currentTheme == 'nerd'"
 				@click="setTheme('nerd')"
 			>
 				<template #icon>
@@ -21,7 +21,7 @@
 			</CoreNavButton>
 
 			<CoreNavButton
-				:is-current-theme="currentTheme !== 'pixel'"
+				:is-current-theme="currentTheme == 'pixel'"
 				@click="setTheme('pixel')"
 			>
 				<template #icon>
@@ -31,7 +31,7 @@
 			</CoreNavButton>
 
 			<CoreNavButton
-				:is-current-theme="currentTheme !== 'oldschool'"
+				:is-current-theme="currentTheme == 'oldschool'"
 				@click="setTheme('oldschool')"
 			>
 				<template #icon>

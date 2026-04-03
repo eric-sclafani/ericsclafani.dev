@@ -1,7 +1,8 @@
 {
 	"about": [
-		"Computational linguistics graduate turned fullsack .NET Developer working at the Kings County District Attorney's Office (KCDA).",
-		"Here I develop RESTful applications for legal staff to perform CRUD operations on complex legal data."
+		"Full Stack Software Developer working at the Kings County District Attorney's Office (KCDA).",
+		"I build data-driven applications for people who actually make a difference in other people's lives.",
+		""
 	],
 	"research": [
 		"My graduate research focused on using advanced stylometric feature extraction to embed language data into high-dimensional vectors.",
@@ -31,7 +32,8 @@
 		"Birdwatching",
 		"Long walks",
 		"Videogames",
-		"Drawing pixel art"
+		"Drawing pixel art",
+		"Playing piano"
 	],
 	"projects": [
 		{

@@ -9,7 +9,9 @@
 				<slot name="label" />
 			</div>
 		</button>
-		<span :hidden="isCurrentTheme"><ArrowBigUp></ArrowBigUp></span>
+		<span :hidden="!isCurrentTheme">
+			<ArrowBigUp></ArrowBigUp>
+		</span>
 	</div>
 </template>
 

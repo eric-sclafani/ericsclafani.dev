@@ -11,10 +11,10 @@
 
 		<div class="flex flex-col">
 			<slot name="content"></slot>
-			<div class="justify-self-end text-center">
+			<!-- <div class="justify-self-end text-center">
 				( <em>{{ elemX }}</em
 				>, <em>{{ elemY }}</em> )
-			</div>
+			</div> -->
 		</div>
 	</fieldset>
 </template>
