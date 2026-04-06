@@ -8,11 +8,9 @@ New portfolio. More coming soon.
 
 - Revisit portfolio information
 
-## Default
+## Default theme
 
 - For each draggable element, keep coords in web storage to retain their position after refresh
-
-- Chosen theme also stay in web storage
 
 - Play around with vueuse composables (onLongPress, etc...)
 
