@@ -7,6 +7,7 @@ New portfolio. More coming soon.
 ## General
 
 - Revisit portfolio information
+- Use vueuse pageleave to change tab title
 
 ## Default theme
 
@@ -21,3 +22,5 @@ New portfolio. More coming soon.
 - Maybe instead of icon libraries, just save the svgs I want to use and build a svg loader. Static and animated svgs
 
 # Attributions
+
+- Icons: https://www.flaticon.com/search?

@@ -14,7 +14,7 @@
 				<span class="pl-1">
 					<Grip></Grip>
 				</span>
-				<div class="pr-1">
+				<div class="pr-2">
 					(<em>{{ elemX }}</em
 					>, <em>{{ elemY }}</em
 					>)

@@ -9,7 +9,10 @@
 					<span class="font-bold">{{ s.label }}</span>
 					<ul>
 						<li v-for="item in s.items">
-							{{ item }}
+							<div class="flex gap-2">
+								<img :src="item.iconUrl" width="20" />
+								<span>{{ item.skill }}</span>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -19,8 +22,8 @@
 </template>
 
 <script setup lang="ts">
-	import type { ListItem } from '@/core/stores/usePortfolioStore';
+	import type { SkillSection } from '@/core/stores/usePortfolioStore';
 	import DraggableCard from '../DraggableCard.vue';
 
-	const props = defineProps<{ skills: ListItem[] }>();
+	const props = defineProps<{ skills: SkillSection[] }>();
 </script>

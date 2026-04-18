@@ -13,10 +13,10 @@
 </template>
 
 <script setup lang="ts">
+	import PageNavBar from '@/core/components/PageNavBar.vue';
+	import ThemeSelection from '@/core/components/ThemeSelection.vue';
 	import { usePortfolioStore } from '@/core/stores/usePortfolioStore';
 	import { useThemeStore } from '@/core/stores/useThemeStore';
-	import ThemeSelection from '@/core/components/ThemeSelection.vue';
-	import PageNavBar from '@/core/components/PageNavBar.vue';
 	import DefaultTheme from '@/themes/default/DefaultTheme.vue';
 	import NerdTheme from '@/themes/nerd/NerdTheme.vue';
 	import { computed } from 'vue';

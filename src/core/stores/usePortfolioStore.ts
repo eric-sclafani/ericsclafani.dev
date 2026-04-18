@@ -1,9 +1,14 @@
 import portfolioData from '@/data/portfolioData.json';
 import { defineStore } from 'pinia';
 
-export type ListItem = {
+export type Skill = {
+	skill: string;
+	iconUrl: string;
+};
+
+export type SkillSection = {
 	label?: string;
-	items: string[];
+	items: Skill[];
 };
 export type Project = {
 	title: string;
@@ -15,7 +20,7 @@ export type Project = {
 export interface Portfolio {
 	about: string[];
 	research: string[];
-	skills: ListItem[];
+	skills: SkillSection[];
 	hobbies: string[];
 	projects: Project[];
 	links: Record<string, string>;

@@ -7,7 +7,7 @@
 			</fieldset>
 			<div class="main-cards">
 				<div class="flex gap-3">
-					<About class="w-160" :about="port.about"></About>
+					<About class="w-120" :about="port.about"></About>
 					<Research
 						class="w-120"
 						:research="port.research"
@@ -15,12 +15,12 @@
 				</div>
 
 				<div class="flex gap-3">
-					<Skills class="w-150" :skills="port.skills"></Skills>
-					<Hobbies :hobbies="port.hobbies"></Hobbies>
+					<Skills class="w-160" :skills="port.skills"></Skills>
+					<Hobbies class="w-60" :hobbies="port.hobbies"></Hobbies>
 					<Contact :links="port.links"></Contact>
 				</div>
 
-				<Projects class="w-250" :projects="port.projects"></Projects>
+				<Projects class="w-150" :projects="port.projects"></Projects>
 			</div>
 		</div>
 	</Transition>
