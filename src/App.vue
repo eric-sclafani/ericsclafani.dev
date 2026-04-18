@@ -1,11 +1,17 @@
-<script setup lang="ts"></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+	<div :class="bgClass"></div>
+	<RouterView></RouterView>
 </template>
+
+<script setup lang="ts">
+	import { computed } from 'vue';
+	import { useThemeStore } from './core/stores/useThemeStore';
+
+	const { currentTheme } = useThemeStore();
+	const bgClass = computed(() => ({
+		'bg-default': currentTheme.value == 'default',
+		'bg-nerd': currentTheme.value == 'nerd',
+	}));
+</script>
 
 <style scoped></style>

@@ -1,0 +1,51 @@
+{
+	"about": [
+		"Graduated from Stony Brook University with an MA in Computational Linguistics but pivoted to software development so I can afford to eat.",
+		"I'm a Full Stack Software Developer at the Kings County District Attorney's Office (KCDA). I build data-driven applications for people who actually make a difference in other people's lives."
+	],
+	"research": [
+		"My graduate research focused on using advanced stylometric feature extraction to embed language data into high-dimensional vectors.",
+		"These vectors were then used for authorship attribution, the task of automatically identifying the author of a document."
+	],
+	"skills": [
+		{
+			"label": "Frontend",
+			"items": ["TypeScript", "JavaScript", "Angular", "VueJS", "HTML"]
+		},
+		{
+			"label": "UI & Styling",
+			"items": ["CSS", "Angular Material", "Bootstrap CSS", "Tailwind"]
+		},
+		{
+			"label": "Serverside",
+			"items": ["ASP.NET Core", ".NET", "C#", "Python"]
+		},
+		{
+			"label": "Database",
+			"items": ["SQL Server", "T-SQL", "SQLite"]
+		}
+	],
+	"hobbies": [
+		"Code side projects",
+		"Reading",
+		"Birdwatching",
+		"Long walks",
+		"Videogames",
+		"Drawing pixel art",
+		"Playing piano"
+	],
+	"projects": [
+		{
+			"title": "Gram2Vec",
+			"description": "Document embedding algorithm that projects documents into a high dimensional vector space based of grammatical writing style",
+			"link": "https://github.com/eric-sclafani/gram2vec",
+			"skills": ["Python", "Pandas", "NumPy", ""]
+		}
+	],
+	"links": {
+		"email": "eric.sclafani321@gmail.com",
+		"linkedin": "https://www.linkedin.com/in/eric-sclafani-64b337226/",
+		"github": "https://github.com/eric-sclafani",
+		"rickroll": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+	}
+}
