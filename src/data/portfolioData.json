@@ -1,6 +1,6 @@
 {
 	"about": [
-		"Graduated from Stony Brook University with an MA in Computational Linguistics but pivoted to software development so I can afford to eat.",
+		"Graduated from Stony Brook University with my Master's in Computational Linguistics but pivoted to software development so I can afford to eat.",
 		"I'm a Full Stack Software Developer at the Kings County District Attorney's Office (KCDA). I build data-driven applications for people who actually make a difference in other people's lives."
 	],
 	"research": [
@@ -86,10 +86,10 @@
 		}
 	],
 	"hobbies": [
-		"Code side projects",
 		"Reading",
 		"Birdwatching",
 		"Long walks",
+		"Coding side projects",
 		"Videogames",
 		"Drawing pixel art",
 		"Playing piano"

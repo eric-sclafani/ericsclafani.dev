@@ -23,4 +23,4 @@ New portfolio. More coming soon.
 
 # Attributions
 
-- Icons: https://www.flaticon.com/search?
+- Brand icons: https://devicon.dev/

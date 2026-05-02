@@ -9,8 +9,8 @@
 
 	const { currentTheme } = useThemeStore();
 	const bgClass = computed(() => ({
-		'bg-default': currentTheme.value == 'default',
-		'bg-nerd': currentTheme.value == 'nerd',
+		'bg-default': currentTheme == 'default',
+		'bg-nerd': currentTheme == 'nerd',
 	}));
 </script>
 

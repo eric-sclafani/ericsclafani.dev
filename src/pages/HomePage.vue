@@ -22,7 +22,6 @@
 	import { computed } from 'vue';
 
 	const port = usePortfolioStore();
-
 	const themeStore = useThemeStore();
 	const currentTheme = computed(() => themeStore.getCurrentTheme);
 </script>

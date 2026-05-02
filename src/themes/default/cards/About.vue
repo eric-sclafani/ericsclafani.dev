@@ -15,7 +15,11 @@
 					v-for="(p, i) in about"
 					:key="i"
 					v-html="
-						emphasizeText(p, ['actually', 'Stony Brook University'])
+						emphasizeText(p, [
+							'actually',
+							'Stony Brook University',
+							'Full Stack Software Developer',
+						])
 					"
 				></p>
 			</div>
