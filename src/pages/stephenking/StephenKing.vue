@@ -1,9 +1,31 @@
 <template>
 	<BasePageLayout>
-		<!-- <div v-for="review of bookReviews" class="flex flex-col gap-1">
-			<span class="font-bold">{{ review.bookTitle }}</span>
-			<p>{{ review.review }}</p>
-		</div> -->
+		<div class="flex flex-col">
+			<div class="flex flex-col self-center">
+				<span>
+					Warning: this page contains
+					<span class="font-bold italic">SPOILERS</span>
+					for many Stephen King books. You've been warned...
+				</span>
+				<span
+					>Books are in publication reading order according to
+					<a
+						href="https://stephenking.com/works/novel/"
+						target="_blank"
+						class="text-blue-600 underline"
+						>stephenking.com</a
+					></span
+				>
+			</div>
+
+			<div v-for="review of reviews" class="flex flex-col gap-1 mb-3">
+				<span class="font-bold"
+					>{{ review.bookTitle }} :
+					<em>({{ review.rating }})</em></span
+				>
+				<p class="flex flex-col gap-3" v-html="review.reviewHTML"></p>
+			</div>
+		</div>
 	</BasePageLayout>
 </template>
 
@@ -16,6 +38,7 @@
 		bookTitle: string;
 		rating: string;
 		reviewHTML: string;
+		displayOrder: string;
 	}
 
 	const reviews = ref<Review[]>([]);
@@ -30,54 +53,16 @@
 			},
 		);
 		const markdown = loadMarkdown(files);
+		markdown.forEach((m) => {
+			const review: Review = {
+				bookTitle: m.metadata['bookTitle'] as string,
+				rating: m.metadata['rating'] as string,
+				displayOrder: m.metadata['order'] as string,
+				reviewHTML: m.HTMLContent,
+			};
+			reviews.value.push(review);
+		});
 	});
-
-	// const bookReviews: Review[] = [
-	// 	{
-	// 		bookTitle: 'Carrie',
-	// 		review: '',
-	// 	},
-	// 	{
-	// 		bookTitle: "Salem's Lot",
-	// 		review: '',
-	// 	},
-	// 	{
-	// 		bookTitle: 'Rage',
-	// 		review: '',
-	// 	},
-	// 	{
-	// 		bookTitle: 'The Shining',
-	// 		review: '',
-	// 	},
-	// 	{
-	// 		bookTitle: 'The Stand',
-	// 		review: '',
-	// 	},
-	// 	{
-	// 		bookTitle: 'Cujo',
-	// 		review: '',
-	// 	},
-	// 	{
-	// 		bookTitle: 'The Body',
-	// 		review: '',
-	// 	},
-	// 	{
-	// 		bookTitle: 'Shawshank Redemption',
-	// 		review: '',
-	// 	},
-	// 	{
-	// 		bookTitle: 'Pet Semetary',
-	// 		review: '',
-	// 	},
-	// 	{
-	// 		bookTitle: 'It',
-	// 		review: "Probably the best book I've read. Stephen King's attention to characterization is on full display here. Like many of his books, this one is more-so character and narrative driven rather than driven by plot. Since the book transitions between childhood and adulthood, I love how you can see their childhood traits reflected in their adult lives.",
-	// 	},
-	// 	{
-	// 		bookTitle: 'Doctor Sleep',
-	// 		review: '',
-	// 	},
-	// ];
 </script>
 
 <style scoped></style>

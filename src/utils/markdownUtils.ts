@@ -3,6 +3,7 @@ import parseMD from 'parse-md';
 
 interface MarkdownFile {
 	metadata: Record<string, string>;
+	path: string;
 	HTMLContent: string;
 }
 
@@ -13,10 +14,14 @@ export const loadMarkdown = (
 
 	const loaded: MarkdownFile[] = [];
 
-	Object.entries(loadedFiles).forEach(([_, stringContent]) => {
+	Object.entries(loadedFiles).forEach(([path, stringContent]) => {
 		const { metadata, content } = parseMD(stringContent);
 		const m = metadata as Record<string, string>;
-		loaded.push({ metadata: m, HTMLContent: md.render(content) });
+		loaded.push({
+			metadata: m,
+			path: path,
+			HTMLContent: md.render(content),
+		});
 	});
 
 	return loaded;
