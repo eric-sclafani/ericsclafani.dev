@@ -62,6 +62,9 @@
 			};
 			reviews.value.push(review);
 		});
+		reviews.value.sort(
+			(a, b) => parseInt(a.displayOrder) - parseInt(b.displayOrder),
+		);
 	});
 </script>
 

@@ -1,10 +1,6 @@
 <template>
 	<Transition name="fade" appear>
-		<div class="flex flex-col">
-			<fieldset class="self-end p-2 border border-dotted rounded">
-				<legend align="center">Legend</legend>
-				<span class="flex gap-2"><Grip></Grip> Draggable </span>
-			</fieldset>
+		<div class="flex justify-between">
 			<div class="main-cards">
 				<div class="flex gap-3">
 					<About class="w-120" :about="port.about"></About>
@@ -22,6 +18,10 @@
 
 				<Projects class="w-150" :projects="port.projects"></Projects>
 			</div>
+			<fieldset class="self-start p-2 border border-dotted rounded">
+				<legend align="center">Legend</legend>
+				<span class="flex gap-2"><Grip></Grip> Draggable </span>
+			</fieldset>
 		</div>
 	</Transition>
 </template>

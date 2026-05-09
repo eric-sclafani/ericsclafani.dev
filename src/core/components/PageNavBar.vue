@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col gap-2 m-2">
-		Other cool stuff
+		<span class="ml-1 font-bold">Other cool stuff:</span>
 		<NavButton v-for="btn of btns" @click="navToPage(btn.pageUrl)">
 			<template #icon>
 				<component :is="btn.icon"></component>
