@@ -19,7 +19,7 @@ New portfolio. More coming soon.
 
 - Add eyes that follow the cursor
 
-- Maybe instead of icon libraries, just save the svgs I want to use and build a svg loader. Static and animated svgs
+- Add option to turn all effects off and on
 
 # Attributions
 

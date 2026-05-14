@@ -48,11 +48,7 @@
 			-4px 5px #808d93,
 			-5px 4px #cdd2d5,
 			-5px 6px #808d93,
-			-6px 5px #cdd2d5,
-			-6px 7px #808d93,
-			-7px 6px #cdd2d5,
-			-7px 8px #808d93,
-			-8px 7px #cdd2d5;
-		transition: all 0.5s ease-in-out;
+			-6px 5px #cdd2d5;
+		transition: all 1s ease-in-out;
 	}
 </style>

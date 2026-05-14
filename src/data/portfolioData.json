@@ -95,14 +95,6 @@
 		"Drawing pixel art",
 		"Learning piano"
 	],
-	"projects": [
-		{
-			"title": "Gram2Vec",
-			"description": "Document embedding algorithm that projects documents into a high dimensional vector space based of grammatical writing style",
-			"link": "https://github.com/eric-sclafani/gram2vec",
-			"skills": ["Python", "Pandas", "NumPy"]
-		}
-	],
 
 	"links": {
 		"email": "eric.sclafani321@gmail.com",

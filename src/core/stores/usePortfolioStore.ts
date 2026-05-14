@@ -11,19 +11,12 @@ export type SkillSection = {
 	label?: string;
 	items: Skill[];
 };
-export type Project = {
-	title: string;
-	link: string;
-	description: string;
-	skills: string[];
-};
 
 export interface Portfolio {
 	about: string[];
 	research: string[];
 	skills: SkillSection[];
 	hobbies: string[];
-	projects: Project[];
 	links: Record<string, string>;
 }
 

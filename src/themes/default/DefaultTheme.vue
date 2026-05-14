@@ -1,6 +1,6 @@
 <template>
 	<Transition name="fade" appear>
-		<div class="flex justify-between">
+		<div class="flex">
 			<div class="main-cards">
 				<div class="flex gap-3">
 					<About class="w-120" :about="port.about"></About>
@@ -13,10 +13,8 @@
 				<div class="flex gap-3">
 					<Skills class="w-160" :skills="port.skills"></Skills>
 					<Hobbies class="w-60" :hobbies="port.hobbies"></Hobbies>
-					<Contact :links="port.links"></Contact>
 				</div>
-
-				<Projects class="w-150" :projects="port.projects"></Projects>
+				<Contact class="w-120" :links="port.links"></Contact>
 			</div>
 			<fieldset class="self-start p-2 border border-dotted rounded">
 				<legend align="center">Legend</legend>
@@ -29,7 +27,6 @@
 <script setup lang="ts">
 	import type { Portfolio } from '@/core/stores/usePortfolioStore';
 	import About from './cards/About.vue';
-	import Projects from './cards/Projects.vue';
 	import Contact from './cards/Contact.vue';
 	import Research from './cards/Research.vue';
 	import Skills from './cards/Skills.vue';
