@@ -1,5 +1,6 @@
 import portfolioData from '@/data/portfolioData.json';
 import { defineStore } from 'pinia';
+import { ref } from 'vue';
 
 export type Skill = {
 	id?: number;
@@ -12,36 +13,52 @@ export type SkillSection = {
 	items: Skill[];
 };
 
+export type Link = {
+	id?: number;
+	iconUrl: string;
+	linkUrl: string;
+};
+
 export interface Portfolio {
 	about: string[];
 	research: string[];
 	skills: SkillSection[];
 	hobbies: string[];
-	links: Record<string, string>;
+	links: Link[];
 }
 
-export const usePortfolioStore = defineStore('portfolio', {
-	state: (): Portfolio => {
+export const usePortfolioStore = defineStore('portfolio', () => {
+	const data = ref<Portfolio>(portfolioData);
+	generateIds();
+
+	function getSkillIds() {
+		const ids: number[] = [];
+		for (let skill of data.value.skills) {
+			skill.items.forEach((s: Skill) => {
+				if (s.id) ids.push(s.id);
+			});
+		}
+		return ids;
+	}
+
+	function generateIds(): void {
 		let count = 1;
-		const data = portfolioData;
-		for (const skill of data.skills) {
+		for (const skill of data.value.skills) {
 			skill.items.forEach((s: Skill) => {
 				s.id = count;
 				count++;
 			});
 		}
+		count = 1;
 
-		return data;
-	},
-	getters: {
-		getSkillIds: (state): number[] => {
-			const ids: number[] = [];
-			for (let skill of state.skills) {
-				skill.items.forEach((s) => {
-					if (s.id) ids.push(s.id);
-				});
-			}
-			return ids;
-		},
-	},
+		for (const link of data.value.links) {
+			link.id = count;
+			count++;
+		}
+	}
+
+	return {
+		data,
+		getSkillIds,
+	};
 });

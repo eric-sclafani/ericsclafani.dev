@@ -94,11 +94,18 @@
 		"Videogames",
 		"Drawing pixel art"
 	],
-
-	"links": {
-		"email": "eric.sclafani321@gmail.com",
-		"linkedin": "https://www.linkedin.com/in/eric-sclafani-64b337226/",
-		"github": "https://github.com/eric-sclafani",
-		"rickroll": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-	}
+	"links": [
+		{
+			"iconUrl": "/mail.png",
+			"linkUrl": "mailto:eric.sclafani321@gmail.com"
+		},
+		{
+			"iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg",
+			"linkUrl": "https://www.linkedin.com/in/eric-sclafani-64b337226/"
+		},
+		{
+			"iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+			"linkUrl": "https://github.com/eric-sclafani"
+		}
+	]
 }

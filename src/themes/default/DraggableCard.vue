@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-	import { events, vDraggable } from '@neodrag/vue';
+	import { events, vDraggable, bounds, BoundsFrom } from '@neodrag/vue';
 	import { Grip } from '@lucide/vue';
 	import { ref } from 'vue';
 
@@ -40,6 +40,7 @@
 		events({
 			onDrag: (data) => onElemDrag(data.offset.x, data.offset.y),
 		}),
+		bounds(BoundsFrom.viewport()),
 	];
 
 	const onElemDrag = (x: number, y: number) => {

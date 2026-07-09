@@ -39,7 +39,7 @@
 	import { onUnmounted, ref } from 'vue';
 
 	const props = defineProps<{ skills: SkillSection[] }>();
-	const skillIds = usePortfolioStore().getSkillIds;
+	const skillIds = usePortfolioStore().getSkillIds();
 
 	let randomSelect = ref(
 		skillIds[Math.floor(Math.random() * skillIds.length)],

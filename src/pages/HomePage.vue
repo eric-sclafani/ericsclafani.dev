@@ -5,7 +5,7 @@
 			<PageNavBar></PageNavBar>
 			<DefaultTheme
 				v-if="currentTheme == 'default'"
-				:port="port"
+				:port="port.data"
 			></DefaultTheme>
 			<NerdTheme v-if="currentTheme == 'nerd'" :port="port"></NerdTheme>
 		</div>

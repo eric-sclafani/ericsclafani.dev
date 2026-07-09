@@ -7,7 +7,7 @@
 			<div class="flex flex-col gap-2">
 				<div class="scrolling-text-wrapper">
 					<p class="scrolling-text">
-						Computer nerd | Book reader | Bird watcher
+						Computer nerd | Avid Book reader | Bird watcher
 					</p>
 				</div>
 				<p

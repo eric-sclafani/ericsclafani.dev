@@ -1,20 +1,15 @@
 <template>
 	<Transition name="fade" appear>
-		<div class="">
-			<div>
-				<div class="flex gap-3">
-					<About class="w-120" :about="port.about"></About>
-					<Research
-						class="w-120"
-						:research="port.research"
-					></Research>
-				</div>
+		<div>
+			<div class="flex gap-3">
+				<About class="w-120" :about="port.about"></About>
+				<Research class="w-120" :research="port.research"></Research>
+			</div>
 
-				<div class="flex gap-3">
-					<Skills class="w-160" :skills="port.skills"></Skills>
-					<Hobbies class="w-60" :hobbies="port.hobbies"></Hobbies>
-					<Contact class="self-start" :links="port.links"></Contact>
-				</div>
+			<div class="flex gap-3">
+				<Skills class="w-160" :skills="port.skills"></Skills>
+				<Hobbies class="w-60" :hobbies="port.hobbies"></Hobbies>
+				<Contact class="self-start" :links="port.links"></Contact>
 			</div>
 		</div>
 	</Transition>

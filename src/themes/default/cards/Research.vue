@@ -28,27 +28,31 @@
 
 	const rSelect = setInterval(() => {
 		randomSelect.value = Math.floor(Math.random() * numParagraphs);
-	}, 4000);
+	}, 5000);
 
 	onUnmounted(() => clearInterval(rSelect));
 </script>
 
 <style scoped>
 	.selected {
-		color: #202c2d;
+		color: #cf1500;
 		text-shadow:
-			0 1px #808d93,
-			-1px 0 #cdd2d5,
-			-1px 2px #808d93,
-			-2px 1px #cdd2d5,
-			-2px 3px #808d93,
-			-3px 2px #cdd2d5,
-			-3px 4px #808d93,
-			-4px 3px #cdd2d5,
-			-4px 5px #808d93,
-			-5px 4px #cdd2d5,
-			-5px 6px #808d93,
-			-6px 5px #cdd2d5;
-		transition: all 1s ease-in-out;
+			0 1px 0px #378ab4,
+			1px 0 0px #5dabcd,
+			1px 2px 1px #378ab4,
+			2px 1px 1px #5dabcd,
+			2px 3px 2px #378ab4,
+			3px 2px 2px #5dabcd,
+			3px 4px 2px #378ab4,
+			4px 3px 3px #5dabcd,
+			4px 5px 3px #378ab4,
+			5px 4px 2px #5dabcd,
+			5px 6px 2px #378ab4,
+			6px 5px 2px #5dabcd,
+			6px 7px 1px #378ab4,
+			7px 6px 1px #5dabcd,
+			7px 8px 0px #378ab4,
+			8px 7px 0px #5dabcd;
+		transition: all 3s ease-in-out;
 	}
 </style>

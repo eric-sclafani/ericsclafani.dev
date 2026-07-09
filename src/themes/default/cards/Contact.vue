@@ -4,16 +4,11 @@
 		<template #content>
 			<div class="flex flex-col items-center gap-3 pb-6">
 				<LinkIcon
-					:link="'mailto:' + links['email']"
-					icon-url="/mail.png"
-				></LinkIcon>
-				<LinkIcon
-					:link="links['github']"
-					icon-url="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-				></LinkIcon>
-				<LinkIcon
-					:link="links['linkedin']"
-					icon-url="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+					v-for="(icon, index) in links"
+					:key="index"
+					:class="currentSelected == index ? 'selected' : ''"
+					:link="icon.linkUrl"
+					:icon-url="icon.iconUrl"
 				></LinkIcon>
 			</div>
 		</template>
@@ -21,9 +16,36 @@
 </template>
 
 <script setup lang="ts">
+	import type { Link } from '@/core/stores/usePortfolioStore.ts';
 	import LinkIcon from '../components/LinkIcon.vue';
 	import DraggableCard from '../DraggableCard.vue';
-	const props = defineProps<{ links: Record<string, string> }>();
+	import { onUnmounted, ref } from 'vue';
+	const props = defineProps<{ links: Link[] }>();
+
+	let currentSelected = ref(0);
+
+	const changeSelection = setInterval(() => {
+		if (currentSelected.value == props.links.length - 1) {
+			currentSelected.value = 0;
+		} else {
+			currentSelected.value++;
+		}
+	}, 3500);
+
+	onUnmounted(() => clearInterval(changeSelection));
 </script>
 
-<style scoped></style>
+<style scoped>
+	.selected {
+		animation: spin 3s;
+	}
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+</style>
